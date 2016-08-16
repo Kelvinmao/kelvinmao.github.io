@@ -22,7 +22,6 @@ owner:
   instagram:      
   flickr:         
   tumblr:
-  CSDN:           kelvinmao
   # google plus id, include the '+', eg +mmistakes
   google_plus:
 
@@ -88,6 +87,3 @@ exclude:
   - package.json
   - spec
   - tmp
-markdown: redcarpet
-redcarpet:
-    extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
