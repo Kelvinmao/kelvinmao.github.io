@@ -1,8 +1,9 @@
-source "https://rubygems.org"
+source 'http://ruby.taobao.org/'
 
-gem "json"
-gem "jekyll"
-gem "jekyll-sitemap"
-gem "jekyll-feed"
-gem "jekyll-paginate"
-gem "jekyll-gist"
+gem 'jekyll'
+gem 'kramdown'
+gem 'coderay'
+gem 'rake'
+gem 'thor'
+gem 'activesupport'
+gem 'stringex'

@@ -1,0 +1,39 @@
+---
+layout: post-index
+permalink: /projects/
+title: My projects
+permalink: /projects/index.html
+description: "My Projects"
+is-toc: true
+image:
+  feature: http://seeksky.qiniudn.com/36.jpg-clip.jpg
+  background: classy_fabric_@2X.png
+---
+
+
+<article class="hentry">
+  <h2>My Projects</h2>
+  <h2>Completed</h2>
+  <div class="row">
+  {% for project in site.projects %}
+	{% if project.status == "completed" %}
+	  <div class="col-sm-6 col-md-4">
+		<div class="thumbnail">
+		  <a href="{{ project.url }}/">
+		  <img src="/images/{{ project.id }}.png">
+		  </a>
+		  <div class="caption">
+		    <a href="{{ project.url }}/">
+			<h3>{{ project.name }}</h3>
+			</a>
+			<h4>{{ project.author }}</h4>
+			<p>{{ project.abstract | strip_html | strip_newlines | truncate: 120 }}</p>
+			<p><a href="{{ project.url }}" class="btn btn-primary" role="button">View</a></p>
+		  </div>
+		</div>
+	  </div>
+	{% endif %}
+  {% endfor %}
+  </div>
+</article><!-- /.hentry -->
+

@@ -7,8 +7,6 @@
  * 
  * Copyright 2013, Codrops
  * http://www.codrops.com
- *
- * Modified by Michael Rose
  */
 ;( function( $, window, undefined ) {
 
@@ -68,7 +66,6 @@
 		},
 		_config : function() {
 			this.open = false;
-			this.$menuwrapper = $( '#dl-menu' );
 			this.$trigger = this.$el.children( '.dl-trigger' );
 			this.$menu = this.$el.children( 'ul.dl-menu' );
 			this.$menuitems = this.$menu.find( 'li:not(.dl-back)' );
@@ -100,10 +97,7 @@
 
 				if( $submenu.length > 0 ) {
 
-					var $flyin = $submenu.clone().css({
-						opacity: 0,
-						margin: 0
-					}).insertAfter( self.$menu ),
+					var $flyin = $submenu.clone().css( 'opacity', 0 ).insertAfter( self.$menu ),
 						onAnimationEndFn = function() {
 							self.$menu.off( self.animEndEventName ).removeClass( self.options.animationClasses.classout ).addClass( 'dl-subview' );
 							$item.addClass( 'dl-subviewopen' ).parents( '.dl-subviewopen:first' ).removeClass( 'dl-subviewopen' ).addClass( 'dl-subview' );
@@ -181,7 +175,6 @@
 					self._resetMenu();
 				};
 			
-			this.$menuwrapper.removeClass( 'dl-menuopen' );
 			this.$menu.removeClass( 'dl-menuopen' );
 			this.$menu.addClass( 'dl-menu-toggle' );
 			this.$trigger.removeClass( 'dl-active' );
@@ -206,7 +199,6 @@
 			$body.off( 'click' ).on( 'click.dlmenu', function() {
 				self._closeMenu() ;
 			} );
-			this.$menuwrapper.addClass( 'dl-menuopen' );
 			this.$menu.addClass( 'dl-menuopen dl-menu-toggle' ).on( this.transEndEventName, function() {
 				$( this ).removeClass( 'dl-menu-toggle' );
 			} );
