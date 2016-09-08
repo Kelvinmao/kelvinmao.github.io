@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 26.Remove Duplicates from Sorted Array
+title: Remove duplicates(删除重复元素问题)
 description: ""
 modified: 2016-06-01T15:27:45-04:00
 tags: [Leetcode Review]
